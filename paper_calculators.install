@@ -1,0 +1,70 @@
+<?php
+// $Id$
+/**
+* Implementation of hook_install().
+*/
+function paper_calculators_install() {
+// Use schema API to create database table.
+drupal_install_schema('paper_calculators');
+}
+/**
+* Implementation of hook_uninstall().
+*/
+function paper_calculators_uninstall() {
+// Use schema API to delete database table.
+drupal_uninstall_schema('paper_calculators');
+// Delete our module's variable from the variables table.
+//variable_delete('paper_calculators_node_types');
+}
+/**
+* Implementation of hook_schema().
+*/
+/*function paper_calculators_schema() {
+
+    $schema['paper_calculators'] = array(
+
+            'description' => t('Stores current registration event.'),
+        'fields' => array(
+            'nid' => array(
+                'type' => 'int',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+                'default' => 0,
+                'description' => t('The {node}.nid to which the registration event applies.'),
+            ),
+            'vid' => array(
+                'type' => 'int',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+                'default' => 0,
+                'description' => t('The {user}.vid of the registration event.')
+            ),
+            'created' => array(
+                'description' => t('A Unix timestamp indicating when the registration event was created.'),
+                'type' => 'int',
+                'not null' => TRUE,
+                'default' => 0
+            ),
+        ),
+        'primary key' => array(
+            'vid'
+        ),
+        'key' => array(
+            'nid'
+        ),
+
+    );
+    
+    return $schema;
+    
+}*/
+
+
+
+
+
+
+
+
+
+

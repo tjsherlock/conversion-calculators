@@ -1,0 +1,9 @@
+; $Id$
+name = "Paper Calculators"
+description = "Custom module to provide paper calculators 17 May 2011"
+core = 6.x
+version = 6.x-1.0
+
+
+
+
